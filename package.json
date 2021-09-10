@@ -1,6 +1,6 @@
 {
-  "name": "react-native-code-push",
-  "version": "1000.0.0-beta",
+  "name": "@itenl/react-native-code-push",
+  "version": "0.0.6",
   "description": "React Native plugin for the CodePush service",
   "main": "CodePush.js",
   "typings": "typings/react-native-code-push.d.ts",
@@ -13,6 +13,7 @@
   "author": "Microsoft Corporation",
   "license": "MIT",
   "scripts": {
+    "postinstall": "shx cp -r ../react-native-code-push ../../react-native-code-push",
     "clean": "shx rm -rf bin",
     "setup": "npm install --quiet --no-progress",
     "prebuild:tests": "npm run clean && npm run tslint",
@@ -41,7 +42,8 @@
     "inquirer": "^7.0.3",
     "plist": "3.0.1",
     "semver": "^7.1.1",
-    "xcode": "1.0.0"
+    "xcode": "1.0.0",
+    "shx": "^0.3.2"
   },
   "devDependencies": {
     "@types/assert": "^1.4.3",
@@ -58,7 +60,6 @@
     "mocha": "^7.0.0",
     "q": "^1.5.1",
     "run-sequence": "latest",
-    "shx": "^0.3.2",
     "slash": "^3.0.0",
     "tslint": "^5.20.1",
     "typescript": "^3.7.5"
